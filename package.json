@@ -1,0 +1,50 @@
+{
+  "name": "@glorious/rasket",
+  "version": "0.1.0",
+  "description": "A simple pub-sub implementation",
+  "main": "dist/rasket.min.js",
+  "files": [
+    "dist/**/*.*"
+  ],
+  "scripts": {
+    "format": "eslint 'src/**/*.js'",
+    "build": "webpack",
+    "start": "http-server -p 9000",
+    "test": "jest",
+    "prepublishOnly": "rm -rf ./dist && NODE_ENV=production npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glorious-codes/glorious-rasket.git"
+  },
+  "keywords": [
+    "pubsub",
+    "publish",
+    "subscribe",
+    "listener",
+    "dispatcher"
+  ],
+  "author": "Rafael Camargo <hello@rafaelcamargo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glorious-codes/glorious-rasket/issues"
+  },
+  "homepage": "https://github.com/glorious-codes/glorious-rasket#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "codecov": "^3.0.4",
+    "eslint": "^5.6.0",
+    "http-server": "^0.12.3",
+    "jest": "^24.9.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "shortid": "^2.2.15"
+  }
+}

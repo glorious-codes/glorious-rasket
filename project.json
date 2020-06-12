@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "source": {
+      "root": "src/",
+      "files": "src/**/*.js",
+      "entry": "src/index.js"
+    },
+    "dist": {
+      "root": "dist",
+      "filename": {
+        "prod": "rasket.min.js",
+        "dev": "rasket.js"
+      }
+    }
+  }
+}
