@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rasket</title>
+  </head>
+  <body>
+    <h1>Rasket</h1>
+    <p>A simple Pub-Sub implementation</p>
+    <h2>User Form</h2>
+    <form data-user-form>
+      <div>
+        <div>
+          <label>Username</label>
+        </div>
+        <input type="text" name="username" />
+      </div>
+      <button>Submit</button>
+    </form>
+    <h2>User Changelog</h2>
+    <div>
+      <button type="button" data-unsubscribe-button>Turn changelog off</button>
+    </div>
+    <ul data-change-list></ul>
+    <script src="./dist/rasket.min.js" charset="utf-8"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
