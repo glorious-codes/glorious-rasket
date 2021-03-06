@@ -1,7 +1,7 @@
 # Rasket
 > A simple Pub-Sub implementation.
 
-[![CircleCI](https://circleci.com/gh/glorious-codes/glorious-rasket.svg?style=svg)](https://circleci.com/gh/glorious-codes/glorious-rasket)
+[![CircleCI](https://circleci.com/gh/glorious-codes/glorious-rasket.svg?style=svg)](https://circleci.com/gh/glorious-codes/glorious-rasket/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/glorious-codes/glorious-rasket/badge.svg?branch=master)](https://coveralls.io/github/glorious-codes/glorious-rasket?branch=master)
 
 ## Installation
