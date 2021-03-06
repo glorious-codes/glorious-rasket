@@ -59,7 +59,7 @@ import rasket from '@glorious/rasket';
 const eventName = 'user:updated';
 const data = { name: 'John Duo', email: 'john@gmail.com' };
 
-const subscriptionId = rasket.publish(eventName, data);
+rasket.publish(eventName, data);
 // At this moment, every piece of code subscribed on 'user:updated'
 // will be notified with that data.
 ```
