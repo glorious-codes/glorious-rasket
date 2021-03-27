@@ -1,4 +1,3 @@
-import idService from './services/id';
 import rasket from './';
 
 describe('Rasket', () => {
@@ -39,13 +38,6 @@ describe('Rasket', () => {
     rasket.unsubscribe(secondSubscriberId);
   });
 
-  it('should return a subscriber id on subscribe', () => {
-    idService.generate = jest.fn(() => '123');
-    const id = rasket.subscribe('testTopic', jest.fn());
-    expect(id).toEqual('123');
-    rasket.unsubscribe(id);
-  });
-
   it('should unsubscribe', () => {
     const eventName = 'testTopic';
     const callback = jest.fn();
@@ -62,10 +54,12 @@ describe('Rasket', () => {
     const secondSubscriberId = rasket.subscribe('secondTopic', secondCallback);
     rasket.publish('firstTopic');
     expect(firstCallback).toHaveBeenCalled();
-    rasket.unsubscribe(firstSubscriberId);
     rasket.publish('secondTopic');
     expect(secondCallback).toHaveBeenCalled();
     rasket.unsubscribe(secondSubscriberId);
+    rasket.publish('secondTopic');
+    expect(secondCallback).toHaveBeenCalledTimes(1);
+    rasket.unsubscribe(firstSubscriberId);
   });
 
   it('should not unsubscribe if subscriber id has not been given', () => {

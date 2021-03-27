@@ -47,11 +47,19 @@ function addSubscriber({ eventName, callback }){
 }
 
 function removeSubscriber(subscriberId){
-  subscribers.splice(findSubscriberById(subscriberId), 1);
+  const subscriberIndex = findSubscriberIndexById(subscriberId);
+  subscribers.splice(subscriberIndex, 1);
 }
 
-function findSubscriberById(id){
-  return subscribers.find(subscriber => subscriber.id === id);
+function findSubscriberIndexById(id){
+  let index;
+  for (var i = 0; i < subscribers.length; i++) {
+    if(subscribers[i].id == id) {
+      index = i;
+      break;
+    }
+  }
+  return index;
 }
 
 function throwInvalidArgumentError(message){
